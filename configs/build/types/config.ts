@@ -6,6 +6,7 @@ export interface BuildPahts {
   entry: string;
   build: string;
   html: string;
+  src: string;
 }
 
 export interface BuildOptions {

@@ -7,9 +7,13 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "esModuleInterop": true // Enabling esModuleInterop will also enable allowSyntheticDefaultImports.
+    "esModuleInterop": true, // Enabling esModuleInterop will also enable allowSyntheticDefaultImports.
     // "allowSyntheticDefaultImports": true,
-    // "baseUrl": "."
+    // ! for absolute import. Почитать об этом
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {

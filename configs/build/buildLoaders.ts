@@ -28,5 +28,28 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
     ],
   };
 
-  return [tsLoader, scssLoader];
+  const svgLoader: RuleSetRule = {
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
+  };
+
+  const fileLoader: RuleSetRule = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  };
+
+  // Почитать про настройку babel
+  const babelLoader: RuleSetRule = {
+    test: /\.m?js$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+    },
+  };
+
+  return [babelLoader, tsLoader, scssLoader, svgLoader, fileLoader];
 }

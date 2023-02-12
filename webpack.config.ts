@@ -17,6 +17,7 @@ export default function (env: BuildEnv) {
     entry: path.resolve(__dirname, "src", "index.tsx"),
     build: path.resolve(__dirname, "dist"),
     html: path.resolve(__dirname, "public", "index.html"),
+    src: path.resolve(__dirname, "src"),
   };
 
   // выносим опции наружу из конфига, чтобы они не были захардкожены и можно было передавать их пропсами.
