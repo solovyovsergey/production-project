@@ -4,8 +4,7 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 // TODO почему не работает автокомплить для путей scss модулей и картинок?
-
-import cls from './ThemeSwitcher.module.scss';
+// TODO Не подсвечивает отсутствующие файлы стилей!
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -19,7 +18,7 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
   return (
     <Button
       theme={ThemeButton.CLEAR}
-      className={classNames(cls.themeSwitcher, {}, [className])}
+      className={classNames('', {}, [className])}
       onClick={toggleTheme}
     >
       {theme === Theme.LIGHT ? <LightIcon /> : <DarkIcon />}

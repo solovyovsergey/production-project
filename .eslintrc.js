@@ -14,10 +14,11 @@ module.exports = {
     // заметил, что обычно сначала идет react/recommended, а уже потом сторонние линтеры
     'plugin:react/recommended',
     'airbnb',
+    'plugin:i18next/recommended',
   ],
 
   // TODO не понятно, как работают и на что влияют.
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   parserOptions: {
     // прочитать
     ecmaFeatures: {
