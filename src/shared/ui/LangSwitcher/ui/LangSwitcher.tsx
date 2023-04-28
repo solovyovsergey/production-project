@@ -1,12 +1,12 @@
-import { Theme, useTheme } from "app/providers/ThemeProvider";
-import { classNames } from "shared/lib/classNames/classNames";
-import { Button, ThemeButton } from "shared/ui/Button/Button";
-import DarkIcon from "shared/assets/icons/theme-dark.svg";
-import LightIcon from "shared/assets/icons/theme-light.svg";
+import { Theme, useTheme } from 'app/providers/ThemeProvider';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import DarkIcon from 'shared/assets/icons/theme-dark.svg';
+import LightIcon from 'shared/assets/icons/theme-light.svg';
 // TODO почему не работает автокомплить для путей scss модулей и картинок?
 
-import cls from "./LangSwitcher.module.scss";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
+import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
   className?: string;
@@ -18,7 +18,7 @@ export const LangSwitcher = (props: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();
 
   const langToggle = () => {
-    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
   };
 
   return (
@@ -27,7 +27,7 @@ export const LangSwitcher = (props: LangSwitcherProps) => {
       className={classNames(cls.themeSwitcher, {}, [className])}
       onClick={langToggle}
     >
-      {t("Язык")}
+      {t('Язык')}
     </Button>
   );
 };

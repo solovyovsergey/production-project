@@ -1,12 +1,12 @@
-import { useCallback, useContext } from "react";
-import { Theme, ThemeContext } from "./ThemeContext";
+import { useCallback, useContext } from 'react';
+import { Theme, ThemeContext } from './ThemeContext';
 
 interface UseThemeResult {
   theme: Theme;
   toggleTheme: () => void;
 }
 
-export const LOCAL_STOREGE_THEME_KEY = "theme";
+export const LOCAL_STOREGE_THEME_KEY = 'theme';
 
 export const useTheme = (): UseThemeResult => {
   const { theme, setTheme } = useContext(ThemeContext);

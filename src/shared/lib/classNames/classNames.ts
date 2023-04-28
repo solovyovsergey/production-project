@@ -3,7 +3,7 @@ type Mod = Record<string, boolean | string>;
 export function classNames(
   cls: string,
   mod: Mod = {},
-  addition: string[] = []
+  addition: string[] = [],
 ): string {
   const classes = [
     cls,
@@ -13,5 +13,5 @@ export function classNames(
       .map(([key]) => key),
   ];
 
-  return classes.join(" ");
+  return classes.join(' ');
 }
