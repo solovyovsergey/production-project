@@ -20,8 +20,7 @@ export default function (env: BuildEnv) {
     src: path.resolve(__dirname, 'src'),
   };
 
-  // выносим опции наружу из конфига,
-  // чтобы они не были захардкожены и можно было передавать их пропсами.
+  // выносим опции наружу из конфига, чтобы они не были захардкожены и можно было передавать их пропсами.
   const buildOptions: BuildOptions = {
     mode,
     paths,
