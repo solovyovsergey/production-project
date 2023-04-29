@@ -1,0 +1,11 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.options": {
+    "overrideConfigFile": "configs/lint/.eslintrc.js"
+  },
+  "stylelint.configFile": "configs/lint/.stylelintrc.js",
+  "stylelint.validate": ["css", "scss"]
+}

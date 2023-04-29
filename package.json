@@ -7,10 +7,10 @@
     "start": "webpack serve --env port=3000",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
-    "lint:ts": "eslint  \"**/*.{ts,tsx}\"",
-    "lint:ts:fix": "eslint  \"**/*.{ts,tsx}\"  --fix",
-    "lint:css": "stylelint \"**/*.{css,scss}\"",
-    "lint:css:fix": "stylelint \"**/*.{css,scss}\"  --fix"
+    "lint:ts": "eslint -c configs/lint/.eslintrc.js \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint -c configs/lint/.eslintrc.js \"**/*.{ts,tsx}\" --fix",
+    "lint:css": "stylelint --config configs/lint/.stylelintrc.js \"**/*.{css,scss}\"",
+    "lint:css:fix": "stylelint --config configs/lint/.stylelintrc.js \"**/*.{css,scss}\" --fix"
   },
   "keywords": [],
   "author": "",
