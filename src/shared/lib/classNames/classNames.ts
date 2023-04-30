@@ -7,10 +7,10 @@ export function classNames(
 ): string {
   const classes = [
     cls,
-    ...addition.filter((i) => i),
     ...Object.entries(mod)
       .filter(([, val]) => val)
       .map(([key]) => key),
+    ...addition.filter((i) => i),
   ];
 
   return classes.join(' ');

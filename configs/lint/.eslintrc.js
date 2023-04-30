@@ -5,6 +5,7 @@ module.exports = {
 
     // предоставляет глобальные переменные es2021 и автоматом выставляет ecmaVersion: 12
     es2021: true,
+    jest: true,
   },
 
   // синтаксический анализатор. по умолчанию Espree(парсит только js). Нам же нужно парсить ts.
@@ -57,7 +58,7 @@ module.exports = {
     // ругается на ипорт webpack. уточнить
     'import/no-extraneous-dependencies': 'off',
 
-    'max-len': ['error', { ignoreComments: true }],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
     'operator-linebreak': ['error', 'before'],
   },
 
