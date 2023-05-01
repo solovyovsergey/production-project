@@ -24,6 +24,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Можно также сохранить информацию об ошибке в соответствующую службу журнала ошибок
+    // ! Пока нашел популярный платный сервис Sentry. Часто используют самописные. Изучить тему и найти альтернативы.
     console.log(error, errorInfo);
   }
 

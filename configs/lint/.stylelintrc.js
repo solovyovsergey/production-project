@@ -7,4 +7,7 @@ module.exports = {
     indentation: 2,
     'string-quotes': 'single',
   },
+  ignoreFiles: [
+    '../../{dist,node_modules}/**/*.*',
+  ],
 };

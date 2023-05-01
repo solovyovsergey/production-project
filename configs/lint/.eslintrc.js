@@ -67,4 +67,7 @@ module.exports = {
   globals: {
     __IS_DEV__: true,
   },
+  ignorePatterns: [
+    '../../{dist,node_modules}/**/*.*',
+  ],
 };
